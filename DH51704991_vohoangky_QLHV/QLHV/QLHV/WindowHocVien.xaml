@@ -1,0 +1,53 @@
+﻿<Window x:Class="QLHV.WindowHocVien"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLHV"
+        mc:Ignorable="d"
+        Title="WindowHocVien" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Mã số học viên"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="tên học viên"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="ngày sinh"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="giới tính"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="lớp"/>
+                <TextBox Name="txtMSHV" Grid.Row="0" Grid.Column="1"/>
+                <TextBox Name="txtTenHV" Grid.Row="1" Grid.Column="1"/>
+                <DatePicker Name="dpNgaySinh" Grid.Row="2" Grid.Column="1" Text="ngày sinh"/>
+                <WrapPanel Grid.Row="3" Grid.Column="1">
+                    <RadioButton Name="rdoNam" Content="Nam"/>
+                    <RadioButton Name="rdoNu" Content="Nữ" IsChecked="True"/>
+                </WrapPanel>
+                <WrapPanel Grid.Column="1" Grid.Row="4">
+                    <ComboBox Name="cmbLop"  SelectedValuePath="malop" DisplayMemberPath="malop"/>
+                    <TextBlock Text="{Binding ElementName=cmbLop,Path=SelectedItem.tenlop}"/>
+                </WrapPanel>
+                <Button Name="btnUpdate" Grid.Row="1" Grid.Column="2" Content="Chấp nhận" Click="btnUpdate_click"/>
+                <Button Name="btnexit" Grid.Row="3" Grid.Column="2" Content="hủy bỏ" Click="btnExit_click"/>
+            </Grid>
+            <Label Content="Bảng điểm" Margin="10px"/>
+            <DataGrid Name="dgBangDiem" AutoGenerateColumns="False" SelectedValuePath="msmh">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="MSMH" Binding="{Binding msmh}"/>
+                    <DataGridTextColumn Header="Tên môn học" Binding="{Binding monhoc}"/>
+                    <DataGridTextColumn Header="Điểm" Binding="{Binding diem}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>

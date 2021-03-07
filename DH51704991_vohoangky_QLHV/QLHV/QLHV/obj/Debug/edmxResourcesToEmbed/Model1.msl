@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qlhvModelStoreContainer" CdmEntityContainer="qlhvEntities">
+    <EntitySetMapping Name="diemthis">
+      <EntityTypeMapping TypeName="qlhvModel.diemthi">
+        <MappingFragment StoreEntitySet="diemthi">
+          <ScalarProperty Name="mshv" ColumnName="mshv" />
+          <ScalarProperty Name="msmh" ColumnName="msmh" />
+          <ScalarProperty Name="diem" ColumnName="diem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lops">
+      <EntityTypeMapping TypeName="qlhvModel.lop">
+        <MappingFragment StoreEntitySet="lop">
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="tenlop" ColumnName="tenlop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lyliches">
+      <EntityTypeMapping TypeName="qlhvModel.lylich">
+        <MappingFragment StoreEntitySet="lylich">
+          <ScalarProperty Name="mshv" ColumnName="mshv" />
+          <ScalarProperty Name="tenhv" ColumnName="tenhv" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="phai" ColumnName="phai" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monhocs">
+      <EntityTypeMapping TypeName="qlhvModel.monhoc">
+        <MappingFragment StoreEntitySet="monhoc">
+          <ScalarProperty Name="msmh" ColumnName="msmh" />
+          <ScalarProperty Name="tenmh" ColumnName="tenmh" />
+          <ScalarProperty Name="sotiet" ColumnName="sotiet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

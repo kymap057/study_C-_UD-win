@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hoadonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chitiethoadon">
+    <Key>
+      <PropertyRef Name="sohd" />
+      <PropertyRef Name="mahang" />
+    </Key>
+    <Property Name="sohd" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="mahang" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="dongia" Type="float" />
+    <Property Name="soluong" Type="int" />
+  </EntityType>
+  <EntityType Name="hanghoa">
+    <Key>
+      <PropertyRef Name="mahang" />
+    </Key>
+    <Property Name="mahang" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenhang" Type="nvarchar" MaxLength="50" />
+    <Property Name="dvt" Type="nvarchar" MaxLength="50" />
+    <Property Name="dongia" Type="float" />
+  </EntityType>
+  <EntityType Name="hoadon">
+    <Key>
+      <PropertyRef Name="sohd" />
+    </Key>
+    <Property Name="sohd" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ngaylaphd" Type="datetime" />
+    <Property Name="tenkh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_chitiethoadon_hanghoa">
+    <End Role="hanghoa" Type="Self.hanghoa" Multiplicity="1" />
+    <End Role="chitiethoadon" Type="Self.chitiethoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hanghoa">
+        <PropertyRef Name="mahang" />
+      </Principal>
+      <Dependent Role="chitiethoadon">
+        <PropertyRef Name="mahang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_chitiethoadon_hoadon">
+    <End Role="hoadon" Type="Self.hoadon" Multiplicity="1" />
+    <End Role="chitiethoadon" Type="Self.chitiethoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hoadon">
+        <PropertyRef Name="sohd" />
+      </Principal>
+      <Dependent Role="chitiethoadon">
+        <PropertyRef Name="sohd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="hoadonModelStoreContainer">
+    <EntitySet Name="chitiethoadon" EntityType="Self.chitiethoadon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hanghoa" EntityType="Self.hanghoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hoadon" EntityType="Self.hoadon" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_chitiethoadon_hanghoa" Association="Self.FK_chitiethoadon_hanghoa">
+      <End Role="hanghoa" EntitySet="hanghoa" />
+      <End Role="chitiethoadon" EntitySet="chitiethoadon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_chitiethoadon_hoadon" Association="Self.FK_chitiethoadon_hoadon">
+      <End Role="hoadon" EntitySet="hoadon" />
+      <End Role="chitiethoadon" EntitySet="chitiethoadon" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

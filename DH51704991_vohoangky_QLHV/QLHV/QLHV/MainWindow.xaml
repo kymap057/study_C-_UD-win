@@ -1,0 +1,39 @@
+﻿<Window x:Class="QLHV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLHV"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel>
+            <Label Name="lblqlhc" Content="Quản lý học viên"></Label>
+            <DataGrid Name="dgqlhv" AutoGenerateColumns="False" SelectedValuePath="mshv">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="mã số học viên" Binding="{Binding mshv }"></DataGridTextColumn>
+                    <DataGridTextColumn Header="tên học viên" Binding="{Binding tenhv}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="ngày sinh" Binding="{Binding ngaysinh}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="phái" Binding="{Binding phai}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="mã lớp" Binding="{Binding malop}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="tên lớp" Binding="{Binding tenlop}"></DataGridTextColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="btnXoaHV" Content="Xóa" Click="BtnXoaHV_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="btnSuaHV" Content="sửa" Click="BtnSuaHV_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Name="btnThemHV" Content="thêm học viên" Click="BtnthemHV_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

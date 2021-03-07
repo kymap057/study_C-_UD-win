@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qlhvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="diemthi">
+    <Key>
+      <PropertyRef Name="mshv" />
+      <PropertyRef Name="msmh" />
+    </Key>
+    <Property Name="mshv" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="msmh" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="diem" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="lop">
+    <Key>
+      <PropertyRef Name="malop" />
+    </Key>
+    <Property Name="malop" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenlop" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="lylich">
+    <Key>
+      <PropertyRef Name="mshv" />
+    </Key>
+    <Property Name="mshv" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenhv" Type="nvarchar" MaxLength="50" />
+    <Property Name="ngaysinh" Type="datetime" />
+    <Property Name="phai" Type="bit" />
+    <Property Name="malop" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="monhoc">
+    <Key>
+      <PropertyRef Name="msmh" />
+    </Key>
+    <Property Name="msmh" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenmh" Type="nvarchar" MaxLength="50" />
+    <Property Name="sotiet" Type="int" />
+  </EntityType>
+  <Association Name="FK_diemthi_lylich">
+    <End Role="lylich" Type="Self.lylich" Multiplicity="1" />
+    <End Role="diemthi" Type="Self.diemthi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lylich">
+        <PropertyRef Name="mshv" />
+      </Principal>
+      <Dependent Role="diemthi">
+        <PropertyRef Name="mshv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_diemthi_monhoc">
+    <End Role="monhoc" Type="Self.monhoc" Multiplicity="1" />
+    <End Role="diemthi" Type="Self.diemthi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="monhoc">
+        <PropertyRef Name="msmh" />
+      </Principal>
+      <Dependent Role="diemthi">
+        <PropertyRef Name="msmh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_lylich_lop">
+    <End Role="lop" Type="Self.lop" Multiplicity="0..1" />
+    <End Role="lylich" Type="Self.lylich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lop">
+        <PropertyRef Name="malop" />
+      </Principal>
+      <Dependent Role="lylich">
+        <PropertyRef Name="malop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="qlhvModelStoreContainer">
+    <EntitySet Name="diemthi" EntityType="Self.diemthi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lop" EntityType="Self.lop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lylich" EntityType="Self.lylich" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="monhoc" EntityType="Self.monhoc" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_diemthi_lylich" Association="Self.FK_diemthi_lylich">
+      <End Role="lylich" EntitySet="lylich" />
+      <End Role="diemthi" EntitySet="diemthi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_diemthi_monhoc" Association="Self.FK_diemthi_monhoc">
+      <End Role="monhoc" EntitySet="monhoc" />
+      <End Role="diemthi" EntitySet="diemthi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_lylich_lop" Association="Self.FK_lylich_lop">
+      <End Role="lop" EntitySet="lop" />
+      <End Role="lylich" EntitySet="lylich" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

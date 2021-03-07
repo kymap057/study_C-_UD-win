@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hinhModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="hocvien">
+    <Key>
+      <PropertyRef Name="mshv" />
+    </Key>
+    <Property Name="mshv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tenhv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="hinhEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="hocviens" EntityType="Self.hocvien" />
+  </EntityContainer>
+</Schema>

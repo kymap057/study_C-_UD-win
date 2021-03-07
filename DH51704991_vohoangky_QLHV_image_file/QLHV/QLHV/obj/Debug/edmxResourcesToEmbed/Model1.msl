@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hinhModelStoreContainer" CdmEntityContainer="hinhEntities">
+    <EntitySetMapping Name="hocviens">
+      <EntityTypeMapping TypeName="hinhModel.hocvien">
+        <MappingFragment StoreEntitySet="hocvien">
+          <ScalarProperty Name="mshv" ColumnName="mshv" />
+          <ScalarProperty Name="tenhv" ColumnName="tenhv" />
+          <ScalarProperty Name="hinh" ColumnName="hinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

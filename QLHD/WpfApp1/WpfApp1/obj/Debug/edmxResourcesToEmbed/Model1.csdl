@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hoadonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="chitiethoadon">
+    <Key>
+      <PropertyRef Name="sohd" />
+      <PropertyRef Name="mahang" />
+    </Key>
+    <Property Name="sohd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mahang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dongia" Type="Double" />
+    <Property Name="soluong" Type="Int32" />
+    <NavigationProperty Name="hanghoa" Relationship="Self.FK_chitiethoadon_hanghoa" FromRole="chitiethoadon" ToRole="hanghoa" />
+    <NavigationProperty Name="hoadon" Relationship="Self.FK_chitiethoadon_hoadon" FromRole="chitiethoadon" ToRole="hoadon" />
+  </EntityType>
+  <EntityType Name="hanghoa">
+    <Key>
+      <PropertyRef Name="mahang" />
+    </Key>
+    <Property Name="mahang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tenhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dvt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dongia" Type="Double" />
+    <NavigationProperty Name="chitiethoadons" Relationship="Self.FK_chitiethoadon_hanghoa" FromRole="hanghoa" ToRole="chitiethoadon" />
+  </EntityType>
+  <EntityType Name="hoadon">
+    <Key>
+      <PropertyRef Name="sohd" />
+    </Key>
+    <Property Name="sohd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ngaylaphd" Type="DateTime" Precision="3" />
+    <Property Name="tenkh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="chitiethoadons" Relationship="Self.FK_chitiethoadon_hoadon" FromRole="hoadon" ToRole="chitiethoadon" />
+  </EntityType>
+  <Association Name="FK_chitiethoadon_hanghoa">
+    <End Role="hanghoa" Type="Self.hanghoa" Multiplicity="1" />
+    <End Role="chitiethoadon" Type="Self.chitiethoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hanghoa">
+        <PropertyRef Name="mahang" />
+      </Principal>
+      <Dependent Role="chitiethoadon">
+        <PropertyRef Name="mahang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_chitiethoadon_hoadon">
+    <End Role="hoadon" Type="Self.hoadon" Multiplicity="1" />
+    <End Role="chitiethoadon" Type="Self.chitiethoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hoadon">
+        <PropertyRef Name="sohd" />
+      </Principal>
+      <Dependent Role="chitiethoadon">
+        <PropertyRef Name="sohd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="hoadonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="chitiethoadons" EntityType="Self.chitiethoadon" />
+    <EntitySet Name="hanghoas" EntityType="Self.hanghoa" />
+    <EntitySet Name="hoadons" EntityType="Self.hoadon" />
+    <AssociationSet Name="FK_chitiethoadon_hanghoa" Association="Self.FK_chitiethoadon_hanghoa">
+      <End Role="hanghoa" EntitySet="hanghoas" />
+      <End Role="chitiethoadon" EntitySet="chitiethoadons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_chitiethoadon_hoadon" Association="Self.FK_chitiethoadon_hoadon">
+      <End Role="hoadon" EntitySet="hoadons" />
+      <End Role="chitiethoadon" EntitySet="chitiethoadons" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

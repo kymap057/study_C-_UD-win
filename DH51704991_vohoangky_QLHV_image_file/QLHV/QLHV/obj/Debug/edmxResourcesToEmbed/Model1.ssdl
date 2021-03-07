@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hinhModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="hocvien">
+    <Key>
+      <PropertyRef Name="mshv" />
+    </Key>
+    <Property Name="mshv" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tenhv" Type="nvarchar" MaxLength="50" />
+    <Property Name="hinh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="hinhModelStoreContainer">
+    <EntitySet Name="hocvien" EntityType="Self.hocvien" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
