@@ -73,6 +73,7 @@
     <Compile Include="CChiTietHoaDon.cs" />
     <Compile Include="CHangHoa.cs" />
     <Compile Include="CHoaDon.cs" />
+    <Compile Include="CXuLiHangHoa.cs" />
     <Compile Include="CXuLiHoaDon.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

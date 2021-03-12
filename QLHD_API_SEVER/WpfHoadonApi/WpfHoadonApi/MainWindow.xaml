@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfHoadonApi"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="800" Width="800" Loaded="Window_Loaded">
     <StackPanel>
         <GroupBox Header="Thông tin hóa đơn">
             <Grid>
@@ -49,7 +49,7 @@
                     <TextBlock Grid.Row="0" Grid.Column="3" Text="Đơn giá"/>
                     <TextBlock Grid.Row="0" Grid.Column="4" Text="Số lượng"/>
                     <Button Grid.Row="1" Grid.Column="5" Content="Chọn hàng hóa" Name="btnChon"/>
-                    <ComboBox Grid.Row="1" Grid.Column="0" Name="cmbMahang"/>
+                    <ComboBox Grid.Row="1" Grid.Column="0" Name="cmbMahang" SelectedValuePath="mahang" DisplayMemberPath="mahang"/>
                     <TextBox Grid.Row="1" Grid.Column="1" IsReadOnly="True"/>
                     <TextBox Grid.Row="1" Grid.Column="2" IsReadOnly="True"/>
                     <TextBox Grid.Row="1" Grid.Column="3" IsReadOnly="True"/>
@@ -57,12 +57,12 @@
                 </Grid>
                 <DataGrid Name="dgChitiet" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã hàng"/>
-                        <DataGridTextColumn Header="Tên hàng" />
-                        <DataGridTextColumn Header="Đơn vị tính"/>
-                        <DataGridTextColumn Header="Đơn giá"/>
-                        <DataGridTextColumn Header="Số lượng"/>
-                        <DataGridTextColumn Header="Thành tiền"/>
+                        <DataGridTextColumn Header="Mã hàng" Binding="{Binding mahang}"/>
+                        <DataGridTextColumn Header="Tên hàng" Binding="{Binding tenhang}"/>
+                        <DataGridTextColumn Header="Đơn vị tính" Binding="{Binding dvt}"/>
+                        <DataGridTextColumn Header="Đơn giá" Binding="{Binding dongia}"/>
+                        <DataGridTextColumn Header="Số lượng" Binding="{Binding soluong}"/>
+                        <DataGridTextColumn Header="Thành tiền" Binding="{Binding thanhtien}"/>
                         <DataGridTemplateColumn>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
@@ -89,7 +89,7 @@
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Danh sách hóa đơn">
-            <DataGrid Name="dgHoadon" AutoGenerateColumns="False" Height="230">
+            <DataGrid Name="dgHoadon" AutoGenerateColumns="False" Height="230" SelectedValuePath="sohd" SelectedCellsChanged="DgHoadon_SelectedCellsChanged" LoadingRowDetails="DgHoadon_LoadingRowDetails">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Số hóa đơn" Binding="{Binding sohd}"/>
                     <DataGridTextColumn Header="Ngày lập hóa đơn" Binding="{Binding ngaylaphd}"/>
@@ -101,12 +101,12 @@
                             <StackPanel>
                                 <DataGrid Name="dgCTHD" AutoGenerateColumns="False">
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Mã hàng"/>
-                                        <DataGridTextColumn Header="Tên hàng"/>
-                                        <DataGridTextColumn Header="Đơn vị tính"/>
-                                        <DataGridTextColumn Header="Đơn giá"/>
-                                        <DataGridTextColumn Header="Số lượng"/>
-                                        <DataGridTextColumn Header="Thành tiền"/>
+                                        <DataGridTextColumn Header="Mã hàng" Binding="{Binding mahang}"/>
+                                        <DataGridTextColumn Header="Tên hàng" Binding="{Binding tenhang}"/>
+                                        <DataGridTextColumn Header="Đơn vị tính" Binding="{Binding dvt}"/>
+                                        <DataGridTextColumn Header="Đơn giá" Binding="{Binding dongia}"/>
+                                        <DataGridTextColumn Header="Số lượng" Binding="{Binding soluong}"/>
+                                        <DataGridTextColumn Header="Thành tiền" Binding="{Binding thanhtien}"/>
                                     </DataGrid.Columns>
                                 </DataGrid>
                                 <Grid>

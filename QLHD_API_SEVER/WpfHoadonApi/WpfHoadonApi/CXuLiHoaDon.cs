@@ -27,5 +27,22 @@ namespace WpfHoadonApi
                 return null;
             }
         }
+        public static CHoaDon getHoaDon(string id)
+        {
+            try
+            {
+                string url = @"http://localhost:50962/api/hoadon/"+id;
+                var res = hc.GetAsync(url);
+                res.Wait();
+                if (res.Result.IsSuccessStatusCode == false) return null;
+                var kq = res.Result.Content.ReadAsAsync<CHoaDon>();
+                kq.Wait();
+                return kq.Result;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

@@ -7,6 +7,8 @@ namespace WpfHoadonApi
 {
     public class CChiTietHoaDon
     {
+
+        public string sohd { get; set; }
         public string mahang { get; set; }
 
         public double? dongia { get; set; }

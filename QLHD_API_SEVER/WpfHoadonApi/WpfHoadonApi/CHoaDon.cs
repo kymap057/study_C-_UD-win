@@ -10,6 +10,6 @@ namespace WpfHoadonApi
         public string sohd { get; set; }
         public DateTime? ngaylaphd { get; set; }
         public string tenkh { get; set; }
-        public ICollection<CChiTietHoaDon> chiTietHoaDons { get; set; }
+        public List<CChiTietHoaDon> chiTietHoaDons { get; set; }
     }
 }
