@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHD_API", "QLHD_API\QLHD_API.csproj", "{49F6DDF1-0A20-47B2-BD53-15A24E801BCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49F6DDF1-0A20-47B2-BD53-15A24E801BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F6DDF1-0A20-47B2-BD53-15A24E801BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F6DDF1-0A20-47B2-BD53-15A24E801BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F6DDF1-0A20-47B2-BD53-15A24E801BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34524F4F-1412-4619-B8FC-DE05EAAF38A2}
+	EndGlobalSection
+EndGlobal
