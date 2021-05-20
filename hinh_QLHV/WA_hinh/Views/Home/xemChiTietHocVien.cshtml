@@ -1,0 +1,36 @@
+﻿@model WA_hinh.Models.hocvien
+
+@{
+    ViewBag.Title = "xemChiTietHocVien";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>xemChiTietHocVien</h2>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<div>
+    <h4>hocvien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenhv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenhv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hinh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.mshv })
+</p>

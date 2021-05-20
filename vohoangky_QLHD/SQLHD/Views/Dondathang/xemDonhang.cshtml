@@ -1,0 +1,102 @@
+﻿@model SQLHD.Models.hoadon
+
+@{
+    ViewBag.Title = "xemDonhang";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Đơn hàng</h2>
+
+<div>
+    <h4>Chi tiết đơn hàng</h4>
+    <hr />
+    <p>
+        @Html.ActionLink("Trở về", "index",null,new { @class = "btn btn-primary" }) 
+    </p>
+    <div class="row">
+        <div class="col-sm-3">
+            <strong style="margin-left:30px;"> @Html.DisplayNameFor(model => model.sohd)</strong>
+        </div>
+        <div class="col-sm-9">
+            <p> @Html.DisplayFor(model => model.sohd)</p>
+        </div>
+        <div class="col-sm-3">
+            <strong style="margin-left:30px;"> @Html.DisplayNameFor(model => model.ngaylaphd)</strong>
+        </div>
+        <div class="col-sm-9">
+            <p>
+                @{
+                    string ngay = Model.ngaylaphd.Value.ToShortDateString();
+                }
+                @Html.DisplayFor(model => ngay)
+            </p>
+        </div>
+        <div class="col-sm-3">
+            <strong style="margin-left:30px;"> @Html.DisplayNameFor(model => model.tenkh)</strong>
+        </div>
+        <div class="col-sm-9">
+            <p> @Html.DisplayFor(model => model.tenkh)</p>
+        </div>
+    </div>
+    <hr/>
+    <h5 style="text-align:center">Danh sách hàng hóa</h5>
+    <table class="table">
+        <tr>
+            <th>
+                mã hàng
+            </th>
+            <th>
+                tên hàng
+            </th>
+            <th>
+                đvt
+            </th>
+            <th>
+                đơn giá
+            </th>
+            <th>
+                số lượng
+            </th>
+            <th>
+                thành tiền
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.chitiethoadons)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mahang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.hanghoa.tenhang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.hanghoa.dvt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dongia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.soluong)
+                </td>
+                <td>
+                    @{
+                        string tt = (item.soluong.Value * item.dongia.Value).ToString();
+                    }
+                    @Html.DisplayFor(modelItem => tt)
+                </td>
+            </tr>
+        }
+        <tr style="font-weight:800;" class="table-active">
+            <td colspan="5" align="center">Tổng tiền</td>
+            <td>
+                @{ 
+                    double sumtt = Model.chitiethoadons.Sum(x => x.dongia.Value * x.soluong.Value);
+                }
+                @sumtt
+            </td>
+        </tr>
+    </table>
+</div>
+

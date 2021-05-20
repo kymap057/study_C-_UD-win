@@ -1,0 +1,69 @@
+﻿@model IEnumerable<waBanhang.Models.phieudathang>
+
+@{
+    ViewBag.Title = "xemDSDondathang";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Danh sách đơn đặt hàng</h2>
+<div class="row font-weight-bold">
+    <div class="col-md-2">
+        Mã đơn đặt hàng
+    </div>
+    <div class="col-md-2">
+        Ngày đặt hàng
+    </div>
+    <div class="col-md-2">
+        Ngày giao hàng
+    </div>
+    <div class="col-md-3">
+        Địa chỉ giao hàng
+    </div>
+    <div class="col-md-1">
+        Mã khách hàng
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+@foreach (var item in Model)
+{
+    <hr />
+    <div class="row">
+        <div class="col-md-2">
+            @item.mapdh
+        </div>
+        <div class="col-md-2">
+            @item.ngaydh
+        </div>
+        <div class="col-md-2">
+            @item.ngaygh
+        </div>
+        <div class="col-md-3">
+            @item.diachigh
+        </div>
+        <div class="col-md-1">
+            @item.makh
+        </div>
+        <div class="col-md-2">
+            <input type="button" value="Xem chi tiết đơn hàng" id="@item.mapdh" class="btn btn-primary"/>
+        </div>
+    </div>
+    string strXem = "m" + item.mapdh;
+    <div class="row" id="@strXem">
+
+    </div>
+}
+<script type="text/javascript">
+    $().ready(function () {
+        $('input:button').click(function () {
+            $var flag = $(this).val();
+            if (flag == 'Xem chi tiết đơn đặt hàng') {
+                var madh = $(this).attr('id');
+                var url = '/Home/xemChitietDonhang/' + madh;
+                var strXem = 'div#m' + madh;
+                $.get(url, function (kq) { $().html(kq); });
+            }
+        })
+    })
+</script>

@@ -1,0 +1,88 @@
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe.config
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\bin\Debug\WpfHinh.pdb
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\bin\Debug\EntityFramework.dll
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.dll
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\bin\Debug\EntityFramework.xml
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.xml
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csprojAssemblyReference.cache
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\MainWindow.g.cs
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\App.g.cs
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.cache
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.lref
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\MainWindow.baml
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.g.resources
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.Properties.Resources.resources
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.GenerateResource.cache
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CoreCompileInputs.cache
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CopyComplete
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.exe
+D:\BaiGiang\XDPMWin\D17_TH\Nhom_2\WpfHinh\WpfHinh\obj\Debug\WpfHinh.pdb
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csprojAssemblyReference.cache
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\MainWindow.g.cs
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\App.g.cs
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.cache
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.lref
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.exe
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.pdb
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe.config
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\bin\Debug\WpfHinh.pdb
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\bin\Debug\EntityFramework.dll
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.dll
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\bin\Debug\EntityFramework.xml
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.xml
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\MainWindow.baml
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.g.resources
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.Properties.Resources.resources
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.GenerateResource.cache
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CoreCompileInputs.cache
+D:\BaiGiang\XDPMWin\D17_TH\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CopyComplete
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe.config
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\WpfHinh.pdb
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\EntityFramework.dll
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.dll
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\Newtonsoft.Json.dll
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\System.Net.Http.Formatting.dll
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\EntityFramework.xml
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.xml
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\Newtonsoft.Json.xml
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\bin\Debug\System.Net.Http.Formatting.xml
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csprojAssemblyReference.cache
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\MainWindow.g.cs
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\App.g.cs
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.cache
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.lref
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\MainWindow.baml
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.g.resources
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.Properties.Resources.resources
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.GenerateResource.cache
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CoreCompileInputs.cache
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CopyComplete
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.exe
+G:\NĂM 4_HK2\Hinhanh\WpfHinh\WpfHinh\obj\Debug\WpfHinh.pdb
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe.config
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\WpfHinh.exe
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\WpfHinh.pdb
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\EntityFramework.dll
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.dll
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\Newtonsoft.Json.dll
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\System.Net.Http.Formatting.dll
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\EntityFramework.xml
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\EntityFramework.SqlServer.xml
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\Newtonsoft.Json.xml
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\bin\Debug\System.Net.Http.Formatting.xml
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csprojAssemblyReference.cache
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\MainWindow.g.cs
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\App.g.cs
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.cache
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh_MarkupCompile.lref
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\MainWindow.baml
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.g.resources
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.Properties.Resources.resources
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.GenerateResource.cache
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CoreCompileInputs.cache
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.csproj.CopyComplete
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.exe
+D:\c#_test\ud_desktop\QLHV_API_wpf_DH51704991_VoHoangKy\WpfHinh\WpfHinh\obj\Debug\WpfHinh.pdb

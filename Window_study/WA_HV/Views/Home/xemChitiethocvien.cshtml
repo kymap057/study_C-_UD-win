@@ -1,0 +1,88 @@
+﻿@model WA_HV.Models.lylich
+
+@{
+    ViewBag.Title = "xemChitiethocvien";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2 style="width:100%; text-align:center">Chi tiết học viên</h2>
+
+<div>
+    <p>
+        @Html.ActionLink("Trang chủ", "Index", null, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.mshv }, new { @class = "btn btn-warning" })
+    </p>
+    <h4>Thông tin học viên</h4>
+    <hr />
+    <div class="row">
+        <div class="col-sm-4">
+            <strong style="margin-left:30px;">@Html.DisplayNameFor(model => model.tenhv)</strong>
+        </div>
+        <div class="col-sm-8">
+            <p>@Html.DisplayFor(model => model.tenhv)</p>
+        </div>
+        <div class="col-sm-4">
+            <strong style="margin-left:30px;"> @Html.DisplayNameFor(model => model.ngaysinh)</strong>
+        </div>
+        <div class="col-sm-8">
+            <p>
+                @{
+                    string ns = Model.ngaysinh.Value.ToString("dd/MM/yyy");
+                }
+                @Html.DisplayFor(model => ns)
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <strong style="margin-left:30px;">@Html.DisplayNameFor(model => model.phai)</strong>
+        </div>
+        <div class="col-sm-8">
+            <p>
+                @{
+                    string gt = (Model.phai.Value) ? "Nam" : "Nữ";
+                }
+                @Html.DisplayFor(model => gt)
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <strong style="margin-left:30px;">@Html.DisplayNameFor(model => model.malop)</strong>
+        </div>
+        <div class="col-sm-8">
+            <p>
+                @Html.DisplayFor(model => model.malop)
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <strong style="margin-left:30px;">Tên lớp</strong>
+        </div>
+        <div class="col-sm-8">
+            <p>
+                @Html.DisplayFor(model => model.lop.tenlop)
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <h4 style="width:100%; text-align:center">Bảng điểm</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"> Mã môn</th>
+                    <th scope="col">Tên môn học</th>
+                    <th scope="col">số tiết</th>
+                    <th scope="col">Điểm</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.diemthis)
+                {
+                    <tr>
+                        <th>@Html.DisplayFor(modelItem => item.msmh)</th>
+                        <td>@Html.DisplayFor(modelItem => item.monhoc.tenmh)</td>
+                        <td>@Html.DisplayFor(modelItem => item.monhoc.sotiet)</td>
+                        <td>@Html.DisplayFor(modelItem => item.diem)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

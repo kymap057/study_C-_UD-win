@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header bg-secondary">
+                Header
+            </div>
+            <div class="card-title bg-info">
+                <div class="row">
+                    <div class="col-md-8">
+                        <ul class="nav list-group-horizontal">
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Quản lý Hàng hóa","Home", "Index", null, new { @Class = "text-white" })
+                            </li>
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Menu2A", "menu2", null, new { @Class = "text-white" })
+                            </li>
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Menu3A", "menu3", null, new { @Class = "text-white" })
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="nav list-group-horizontal float-right">
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Giỏ hàng", "xemGiohang", null, new { @Class = "text-white" })
+                            </li>
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Menu2B", "menu2", null, new { @Class = "text-white" })
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul class="nav list-group">
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Lập đơn đặt hàng", "Index", null, new { @Class = "text-white" })
+                            </li>
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Xem đơn dặt hàng", "xemDSDondathang", null, new { @Class = "text-white" })
+                            </li>
+                            <li class="nav-item list-group-item bg-primary ">
+                                @Html.ActionLink("Menu3C", "menu3", null, new { @Class = "text-white" })
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-10">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-secondary">
+                Footer
+            </div>
+        </div>
+    </div>
+</body>
+</html>

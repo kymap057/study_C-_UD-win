@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SQLHD.Models.hoadon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Danh sách đơn hàng</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sohd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaylaphd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenkh)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sohd)
+        </td>
+        <td>
+            @{ 
+                string ngay = item.ngaylaphd.Value.ToShortDateString();
+            }
+            @Html.DisplayFor(modelItem => ngay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenkh)
+        </td>
+        <td>
+            @Html.ActionLink("Xem", "xemDonhang", new { id = item.sohd },new{ @class="btn btn-outline-info" }) | 
+            @Html.ActionLink("Xoá", "xoaDonhang", new { id = item.sohd }, new { @class = "btn btn-outline-danger" })
+        </td>
+    </tr>
+}
+
+</table>

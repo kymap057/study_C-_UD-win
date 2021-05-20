@@ -1,0 +1,80 @@
+﻿@model waBanhang.Models.phieudathang
+
+<div class="border">
+    <h4>phieudathang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaygh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaygh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachigh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachigh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.makh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.makh)
+        </dd>
+
+    </dl>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã hàng</th>
+                <th>Tên hàng</th>
+                <th>Đơn vị tính</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.chitietphieudathangs)
+            {
+                <tr>
+                    <td>@item.mahang</td>
+                    <td>@item.hanghoa.tenhang</td>
+                    <td>@item.hanghoa.donvitinh</td>
+                    <td>@item.dongia</td>
+                    <td>@item.soluong</td>
+                    <td>@(item.soluong.Value*item.dongia.Value)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <input type="button" value="Đóng chi tiết" id="@Model.mapdh" class="btn btn-primary" />
+</div>
+<script type="text/javascript">
+    $().ready(function () {
+        $('input:button').click(function () {
+            $var flag = $(this).val();
+            if (flag == 'Đóng chi tiết') {
+                var madh = $(this).attr('id');
+                var url = '/Home/dongChitietDonhang';
+                var strXem = 'div#m' + madh;
+                $.get(url, function (kq) { $(strXem).html(kq); });
+            }
+        })
+    })
+</script>
+

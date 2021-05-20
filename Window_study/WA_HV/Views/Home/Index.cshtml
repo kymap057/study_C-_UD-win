@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WA_HV.Models.lylich>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/_LayoutPage1.cshtml";
+    }
+
+    <h2>Danh Sách Học Viên</h2>
+
+    <p>
+        @Html.ActionLink("Thêm học viên", "formthemHV", null, new { @class = "btn btn-success link" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.mshv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tenhv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ngaysinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.malop)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mshv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tenhv)
+                </td>
+                <td>
+                    @{
+                        string ns = item.ngaysinh.Value.ToString("dd/MM/yyy");
+                    }
+                    @Html.DisplayFor(modelItem => ns)
+                </td>
+                <td>
+                    @{
+                        string gt = (item.phai.Value) ? "Nam" : "Nữ";
+                    }
+                    @Html.DisplayFor(modelItem => gt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.malop)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { @id = item.mshv }, new { @class ="btn btn-warning"}) |
+                    @Html.ActionLink("Xem", "xemChitiethocvien", new { @id = item.mshv }, new { @class ="btn btn-info" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { @id = item.mshv },new{ @class ="btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>

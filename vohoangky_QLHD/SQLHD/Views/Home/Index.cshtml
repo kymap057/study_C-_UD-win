@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SQLHD.Models.hanghoa>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Hàng hóa</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table  table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mahang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenhang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dvt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dongia)
+        </th>
+        <th>số lượng</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <form action="@Url.Content("/Home/Chonmua")" method="post">
+            <td>
+                @Html.DisplayFor(modelItem => item.mahang)
+                <input type="hidden" value="@item.mahang" name="mahang"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenhang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dvt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dongia)
+            </td>
+            <td>
+                <input type="number" value="1" class="input-group-sm" name="soluong"/>
+            </td>
+            <td>
+                <input type="submit" value="Chọn mua" class="btn btn-primary" />
+            </td>
+        </form>
+    </tr>
+}
+
+</table>

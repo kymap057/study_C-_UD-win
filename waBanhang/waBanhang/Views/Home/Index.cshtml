@@ -1,0 +1,69 @@
+﻿@model IEnumerable<waBanhang.Models.hanghoa>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Danh sách hàng hóa</h2>
+
+@{ 
+    int socot = 4;
+    int sodong;
+    int n = Model.ToList().Count;
+    if (n % socot == 0)
+    {
+        sodong = n / socot;
+    }
+    else
+    {
+        sodong = n / socot + 1;
+    }
+    for(int i=0;i<sodong;i++)
+    {
+    <div class="row">
+        <hr />
+        @for (int j = 0; j < socot; j++)
+        {
+            int k = socot * i + j;
+
+            if (k < n)
+            {
+                waBanhang.Models.hanghoa hh = Model.ToList()[k];
+    <div class="col-md-3">
+        <form action="@Url.Content("/Home/chonMuahang")" method="POST">
+            <img src="@Url.Content("~/HinhAnh/"+hh.hinh)" alt="Không có hình" height="100" width="100" />
+            <div class="row">
+                <div class="col-md-4">Mã hàng</div>
+                <div class="col-md-8">@hh.mahang</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Tên hàng</div>
+                <div class="col-md-8">@hh.tenhang</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Đơn giá</div>
+                <div class="col-md-8">@hh.dongia</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Số lượng</div>
+                <div class="col-md-8">
+                    <input type="number" value="1" name="soluong" class=""/>
+                    <input type="hidden"  value="@hh.mahang" name="mahang" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="submit" value="Chọn mua" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+        
+    </div>
+            }
+        }
+    </div>
+
+
+    }
+}
